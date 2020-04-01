@@ -1,0 +1,12 @@
+{
+  "all": true,
+  "exclude": [
+    "build/",
+    "database/",
+    "src/dump/",
+    "src/models/",
+    "src/validations/",
+    "tests/**/*"
+  ],
+  "sourceMap": false
+}

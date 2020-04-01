@@ -1,0 +1,42 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "ExpressJS Starter Template",
+    "description": "Starter Template for ExpressJS applications",
+    "contact": {
+      "email": "meetdesmond.edem@gmail.com"
+    },
+    "license": {
+      "name": "MIT License",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    },
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:{port}",
+      "description": "development server",
+      "variables": {
+        "port": {
+          "description": "port where server is running on. defaults to 7000",
+          "default": "7000"
+        }
+      }
+    }
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "summary": "root endpoint for API",
+        "responses": {
+          "200": {
+            "description": "success. displays welcome message"
+          },
+          "404": {
+            "description": "endpoint/resource does not exist"
+          }
+        }
+      }
+    }
+  }
+}
