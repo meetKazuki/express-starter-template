@@ -1,0 +1,53 @@
+{
+  "name": "express-starter-template",
+  "version": "1.0.0",
+  "description": "Starter template for my Express APIs",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "build": "npm run clean && npm run build-babel",
+    "build-babel": "babel -d ./build ./src --source-maps",
+    "clean": "rm -rf .nyc_output build coverage && mkdir build",
+    "dev": "DEBUG=dev nodemon src/server.js",
+    "lint": "eslint \"**/*.js\" --fix",
+    "start": "node ./build/server.js",
+    "test": "NODE_ENV=test nyc mocha tests/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meetKazuki/nextBigThing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meetKazuki/nextBigThing/issues"
+  },
+  "homepage": "https://github.com/meetKazuki/nextBigThing#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "debug": "^4.1.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
+    "swagger-ui-express": "^4.1.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/register": "^7.9.0",
+    "chai": "^4.2.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "mocha": "^7.1.1",
+    "nodemon": "^2.0.2",
+    "nyc": "^15.0.0",
+    "supertest": "^4.0.2"
+  }
+}
